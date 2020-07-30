@@ -33,6 +33,9 @@ func main() {
 	if err = master.InitConfig(conFile); err != nil {
 		goto ERR
 	}
+	if err = master.InitJobMgr(); err != nil {
+		goto ERR
+	}
 	if err = master.InitAPIServe(); err != nil {
 		goto ERR
 	}

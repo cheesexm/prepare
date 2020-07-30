@@ -7,9 +7,11 @@ import (
 
 //Config 读取json配置
 type Config struct {
-	APIPort         int `json:"APIPort"`
-	APIReadTimeout  int `json:"APIReadTimeout"`
-	APIWriteTimeout int `json:"APIWriteTimeout"`
+	APIPort         int      `json:"APIPort"`
+	APIReadTimeout  int      `json:"APIReadTimeout"`
+	APIWriteTimeout int      `json:"APIWriteTimeout"`
+	EtcdEndPoints   []string `json:"etcdEndPoints"`
+	EtcdDialTimeout int      `json:"etcdDialTimeout"`
 }
 
 //config单例
