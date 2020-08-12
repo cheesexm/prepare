@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"runtime"
+	"time"
 
 	"github.com/cheesexm/prepar/master"
 )
@@ -38,6 +39,9 @@ func main() {
 	}
 	if err = master.InitAPIServe(); err != nil {
 		goto ERR
+	}
+	for {
+		time.Sleep(1 * time.Second)
 	}
 	return
 ERR:
